@@ -1,0 +1,29 @@
+version: "2"
+
+services:
+  lurcher:
+    extends:
+      service: lurcher
+      file: ./lurcher/docker-compose.yml
+    container_name: core_lurcher
+    build:
+      context: ./lurcher
+
+  seeker:
+    extends:
+      service: seeker
+      file: ./seeker/docker-compose.yml
+    container_name: core_seeker
+    build:
+      context: ./seeker
+    depends_on:
+      - lurcher
+      - shooter
+
+  shooter:
+    extends:
+      service: shooter
+      file: ./shooter/docker-compose.yml
+    container_name: core_shooter
+    build:
+      context: ./shooter

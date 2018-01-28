@@ -1,0 +1,6 @@
+# number of CPUs (2 by default)
+cpus: 2
+# memory size in MBytes (2048 by default)
+memory: 2048
+# IP address
+ip: 10.200.5.5

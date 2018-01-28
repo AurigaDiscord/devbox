@@ -1,0 +1,5 @@
+# local configuration file
+vagrant-vars.yml
+
+# Vagrant local data
+.vagrant*
